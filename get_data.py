@@ -3,6 +3,7 @@ import json
 import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
 from dotenv import load_dotenv
+from tqdm import tqdm
 
 ###############################################
 # Before you run get_data.py
@@ -41,13 +42,16 @@ class Artist:
 		return hash(self.artist_id)
 
 
+###############################################
+# Authentication and Initialization
+###############################################
+	
 client_credentials_manager = SpotifyClientCredentials()
 sp = spotipy.Spotify(client_credentials_manager=client_credentials_manager)
 
 start = ["246dkjvS1zLTtiykXe5h60", "66CXWjxzNUsdJxJ2JdwvnR", "718COspgdWOnwOFpJHRZHS", "4kYSro6naA4h99UJvo89HB", "20JZFwl6HVl6yg8a4H3ZqK"]
 queue = []
 max_artists = 100000
-show_artists = 1000
 follower_threshold = 1000
 artist_set = set()
 artist_map = defaultdict(list)
@@ -59,6 +63,11 @@ for cur_id in start:
 	artist_set.add(cur_artist)
 	queue.append(cur_artist)
 
+###############################################
+# BFS on Recommended Artists
+###############################################
+	
+pbar = tqdm(desc="Number of Artists Processed", unit=" artists")
 while queue and len(artist_set) < max_artists:
 	cur = queue.pop(0)
 	artists = sp.artist_related_artists(cur.artist_id)
@@ -69,8 +78,7 @@ while queue and len(artist_set) < max_artists:
 		artist_map[cur.artist_id].append(related.artist_id)
 		if related not in artist_set:
 			queue.append(related)
-			if len(artist_set) % show_artists == 0:
-				print("Current number of artists:", len(artist_set))
+			pbar.update(1) 
 		artist_set.add(related)
 
 json.dump(artist_map, open("related.json", "w+"), indent=4)
