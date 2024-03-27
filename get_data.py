@@ -2,7 +2,23 @@ from collections import defaultdict
 import json
 import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
+from dotenv import load_dotenv
 
+###############################################
+# Before you run get_data.py
+###############################################
+# 1.) Install spotify api python wrapper 
+#   ...........
+#   pip install spotipy
+#   ...........
+# 2.) Create a .env and store your api credentials there
+#   ...........
+#   SPOTIPY_CLIENT_ID='your-spotify-client-id'
+#   SPOTIPY_CLIENT_SECRET='your-spotify-client-secret'
+#   SPOTIPY_REDIRECT_URI='your-app-redirect-url' (I used http://localhost)
+#   ...........
+
+load_dotenv()
 
 class Artist:
 	'''Helper class for compiling information about artists'''
@@ -37,6 +53,7 @@ artist_set = set()
 artist_map = defaultdict(list)
 
 for cur_id in start:
+	print(cur_id)
 	cur = sp.artist(cur_id)
 	cur_artist = Artist(cur_id, cur["name"], cur["genres"], cur["followers"]["total"])
 	artist_set.add(cur_artist)
