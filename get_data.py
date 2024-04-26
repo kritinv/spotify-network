@@ -47,6 +47,36 @@ class Artist:
 # Authentication and Initialization
 ###############################################
 
+# jessicas
+#   SPOTIPY_CLIENT_ID='cd577af44aa748d98b50df5fc60efcad'
+#   SPOTIPY_CLIENT_SECRET='41ef48a4f63f4b27915ac3d387cd7b86'
+#   SPOTIPY_REDIRECT_URI='http://localhost:3000'
+
+# belindas
+#   SPOTIPY_CLIENT_ID='6f1d515387ea45e0be22d9f64e79f86f'
+#   SPOTIPY_CLIENT_SECRET='3db998def7e542359d60c92fd7dc97e2'
+#   SPOTIPY_REDIRECT_URI='http://localhost'
+
+# kathys
+#   SPOTIPY_CLIENT_ID='ffc4f29a4db942dcbb0647017847acfa'
+#   SPOTIPY_CLIENT_SECRET='1bb7e334d3b34cd593ef73f8c6bfac5c'
+#   SPOTIPY_REDIRECT_URI='http://localhost'
+
+# kathy 2s
+#   SPOTIPY_CLIENT_ID='5aa9b8bcdb314445b1e9e0ffa8b62651'
+#   SPOTIPY_CLIENT_SECRET='d4f560624f6c434fa54aa554666ba32b'
+#   SPOTIPY_REDIRECT_URI='http://localhost'
+
+# kathy 3s
+#   SPOTIPY_CLIENT_ID='748740587c3c4e249aa6e7556ec45450'
+#   SPOTIPY_CLIENT_SECRET='092d3402d913406fa31df5cbfa4b62c2'
+#   SPOTIPY_REDIRECT_URI='http://localhost'
+
+# rehas
+#   SPOTIPY_CLIENT_ID='5c7dd99433934d9aadc74007f1dbc77b'
+#   SPOTIPY_CLIENT_SECRET='c18f75a6357d4fab866e926443959ee9'
+#   SPOTIPY_REDIRECT_URI='http://localhost:3000'
+
 # Authentication
 auth_manager  = SpotifyClientCredentials()
 sp = spotipy.Spotify(client_credentials_manager=auth_manager, requests_timeout=5, retries=10)
@@ -55,21 +85,22 @@ sp = spotipy.Spotify(client_credentials_manager=auth_manager, requests_timeout=5
 # If a song had multiple artists, only the first was selected
 # Wnet down the list until 5 distinct artists were obtained
 starting_artists = {
-	"2013": ["5BcAKTbp20cv7tC5VqPFoC", "0ZrpamOxcZybMHGg1AYtHP", "53XhwfbYqKCa1cC15pYq2q", "25fqWEebq6PoiGQIHIrdtv", "31TPClRtHm23RisEBtV3X7"],
-	"2014": ["2RdwBSPQiwcmiDo9kixcl8", "6jJ0s89eD6GaHleKKya26X", "5y2Xq6xcjJb2jVM54GHK3t", "5yG7ZAZafVaAlMTeBybKAL", "5Pwc4xIPtQLFEnJriah9YJ"],
-	"2015": ["3hv9jJF3adDNsBSIQDqcjp", "6eUKZXaKkcviH0Ku9w2n3V", "137W8MRPWKqSmrBGDBFSop", "6PXS4YHDkKvl1wkIl4V8DL", "04gDigrS5kc9YWfZHwBETP"],
-	"2016": ["1uNFoZAHBGtllmzznpCI3s", "3TVXtAsR1Inumwj472S9r4", "5pKCCKE2ajJHZ9KAiaK11H", "3YQKmKGau1PzlVlkL1iodx", "7pFeBzX627ff0VnN6bxPR4"],
-	"2017": ["6eUKZXaKkcviH0Ku9w2n3V", "4V8Sr092TqfHkfAA5fXXqG", "0du5cEVh5yTK9QJze8zA0C", "2YZyLoL8N0Wb9xBt1NhZWg", "69GGBxA162lTqCwzJG5jLp"],
-	"2018": ["3TVXtAsR1Inumwj472S9r4", "6eUKZXaKkcviH0Ku9w2n3V", "64M6ah0SkkRsnPGtGiRAbb", "4nDoRrQiYLoBzwC5BhVJzF", "246dkjvS1zLTtiykXe5h60"],
-	"2019": ["7jVv8c5Fj3E9VhNjxT4snq", "246dkjvS1zLTtiykXe5h60", "26VFTg2z8YR0cCuwLzESi2", "6qqNVTkY8uBg9cP3Jd7DAH", "64KEffDW9EtZ1y2vBYgq8T"],
-	"2020": ["1Xyo4u8uXC1ZmMpatF05PJ", "246dkjvS1zLTtiykXe5h60", "757aE44tKEUQEqRuT6GnEB", "6M2wZ9GZgrQXHCFfjv46we", "4r63FhuTkUYltbVAg5TQnk"],
-	"2021": ["6M2wZ9GZgrQXHCFfjv46we", "1Xyo4u8uXC1ZmMpatF05PJ", "6fWVd57NKTalqvmjRd2t8Z", "1McMsnEElThX1knmY4oliG", "5cj0lLjcoR7YOSnhnX0Po5"],
-	"2022": ["4yvcSjfu4PC0CYQyLy4wSq", "6KImCVD70vtIoJWnq6nGn3", "2tIP7SsRs7vjIcLrU85W8J", "4dpARuHxo51G3z768sgnrY", "6eUKZXaKkcviH0Ku9w2n3V"],
-	"2023": ["4oUHIQIBe0LHzYfvXNW4QM", "5YGY8feqx7naU7z4HrwZM6", "7tYKF4w9nC0nq9CsPZTHyP", "06HL4z0CvFAxyc27GXpf02", "0iEtIxbK0KxaSlF7G42ZOp"],
+	# "2013": ["5BcAKTbp20cv7tC5VqPFoC", "0ZrpamOxcZybMHGg1AYtHP", "53XhwfbYqKCa1cC15pYq2q", "25fqWEebq6PoiGQIHIrdtv", "31TPClRtHm23RisEBtV3X7"],
+	# "2014": ["2RdwBSPQiwcmiDo9kixcl8", "6jJ0s89eD6GaHleKKya26X", "5y2Xq6xcjJb2jVM54GHK3t", "5yG7ZAZafVaAlMTeBybKAL", "5Pwc4xIPtQLFEnJriah9YJ"],
+	# "2015": ["3hv9jJF3adDNsBSIQDqcjp", "6eUKZXaKkcviH0Ku9w2n3V", "137W8MRPWKqSmrBGDBFSop", "6PXS4YHDkKvl1wkIl4V8DL", "04gDigrS5kc9YWfZHwBETP"],
+	# "2016": ["1uNFoZAHBGtllmzznpCI3s", "3TVXtAsR1Inumwj472S9r4", "5pKCCKE2ajJHZ9KAiaK11H", "3YQKmKGau1PzlVlkL1iodx", "7pFeBzX627ff0VnN6bxPR4"],
+	# "2017": ["6eUKZXaKkcviH0Ku9w2n3V", "4V8Sr092TqfHkfAA5fXXqG", "0du5cEVh5yTK9QJze8zA0C", "2YZyLoL8N0Wb9xBt1NhZWg", "69GGBxA162lTqCwzJG5jLp"],
+	# "2018": ["3TVXtAsR1Inumwj472S9r4", "6eUKZXaKkcviH0Ku9w2n3V", "64M6ah0SkkRsnPGtGiRAbb", "4nDoRrQiYLoBzwC5BhVJzF", "246dkjvS1zLTtiykXe5h60"],
+	# "2019": ["7jVv8c5Fj3E9VhNjxT4snq", "246dkjvS1zLTtiykXe5h60", "26VFTg2z8YR0cCuwLzESi2", "6qqNVTkY8uBg9cP3Jd7DAH", "64KEffDW9EtZ1y2vBYgq8T"],
+	# "2020": ["1Xyo4u8uXC1ZmMpatF05PJ", "246dkjvS1zLTtiykXe5h60", "757aE44tKEUQEqRuT6GnEB", "6M2wZ9GZgrQXHCFfjv46we", "4r63FhuTkUYltbVAg5TQnk"],
+	# "2021": ["6M2wZ9GZgrQXHCFfjv46we", "1Xyo4u8uXC1ZmMpatF05PJ", "6fWVd57NKTalqvmjRd2t8Z", "1McMsnEElThX1knmY4oliG", "5cj0lLjcoR7YOSnhnX0Po5"],
+	# "2022": ["4yvcSjfu4PC0CYQyLy4wSq", "6KImCVD70vtIoJWnq6nGn3", "2tIP7SsRs7vjIcLrU85W8J", "4dpARuHxo51G3z768sgnrY", "6eUKZXaKkcviH0Ku9w2n3V"],
+	# "2023": ["4oUHIQIBe0LHzYfvXNW4QM", "5YGY8feqx7naU7z4HrwZM6", "7tYKF4w9nC0nq9CsPZTHyP", "06HL4z0CvFAxyc27GXpf02", "0iEtIxbK0KxaSlF7G42ZOp"],
+	"2023": ["5BcAKTbp20cv7tC5VqPFoC", "0ZrpamOxcZybMHGg1AYtHP", "53XhwfbYqKCa1cC15pYq2q", "25fqWEebq6PoiGQIHIrdtv", "31TPClRtHm23RisEBtV3X7"],
 	}
 
 # Parameters
-max_artists = 1000
+max_artists = 500
 follower_threshold = 1000
 queues = {year: [] for year in starting_artists.keys()}
 artist_sets = {year: set() for year in starting_artists.keys()}
