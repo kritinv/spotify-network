@@ -85,16 +85,16 @@ sp = spotipy.Spotify(client_credentials_manager=auth_manager, requests_timeout=5
 # If a song had multiple artists, only the first was selected
 # Wnet down the list until 5 distinct artists were obtained
 starting_artists = {
-	#"2013": ["5BcAKTbp20cv7tC5VqPFoC", "0ZrpamOxcZybMHGg1AYtHP", "53XhwfbYqKCa1cC15pYq2q", "25fqWEebq6PoiGQIHIrdtv", "31TPClRtHm23RisEBtV3X7"],
-	#"2014": ["5BcAKTbp20cv7tC5VqPFoC", "0ZrpamOxcZybMHGg1AYtHP", "53XhwfbYqKCa1cC15pYq2q", "25fqWEebq6PoiGQIHIrdtv", "31TPClRtHm23RisEBtV3X7"],
-	#"2015": ["5BcAKTbp20cv7tC5VqPFoC", "0ZrpamOxcZybMHGg1AYtHP", "53XhwfbYqKCa1cC15pYq2q", "25fqWEebq6PoiGQIHIrdtv", "31TPClRtHm23RisEBtV3X7"],
-	#"2016": ["5BcAKTbp20cv7tC5VqPFoC", "0ZrpamOxcZybMHGg1AYtHP", "53XhwfbYqKCa1cC15pYq2q", "25fqWEebq6PoiGQIHIrdtv", "31TPClRtHm23RisEBtV3X7"],
-	# "2017": ["5BcAKTbp20cv7tC5VqPFoC", "0ZrpamOxcZybMHGg1AYtHP", "53XhwfbYqKCa1cC15pYq2q", "25fqWEebq6PoiGQIHIrdtv", "31TPClRtHm23RisEBtV3X7"],
-	# "2018": ["5BcAKTbp20cv7tC5VqPFoC", "0ZrpamOxcZybMHGg1AYtHP", "53XhwfbYqKCa1cC15pYq2q", "25fqWEebq6PoiGQIHIrdtv", "31TPClRtHm23RisEBtV3X7"],
-	# "2019": ["7jVv8c5Fj3E9VhNjxT4snq", "246dkjvS1zLTtiykXe5h60", "26VFTg2z8YR0cCuwLzESi2", "6qqNVTkY8uBg9cP3Jd7DAH", "64KEffDW9EtZ1y2vBYgq8T"],
-	# "2020": ["1Xyo4u8uXC1ZmMpatF05PJ", "246dkjvS1zLTtiykXe5h60", "757aE44tKEUQEqRuT6GnEB", "6M2wZ9GZgrQXHCFfjv46we", "4r63FhuTkUYltbVAg5TQnk"],
-	# "2021": ["6M2wZ9GZgrQXHCFfjv46we", "1Xyo4u8uXC1ZmMpatF05PJ", "6fWVd57NKTalqvmjRd2t8Z", "1McMsnEElThX1knmY4oliG", "5cj0lLjcoR7YOSnhnX0Po5"],
-	# "2022": ["4yvcSjfu4PC0CYQyLy4wSq", "6KImCVD70vtIoJWnq6nGn3", "2tIP7SsRs7vjIcLrU85W8J", "4dpARuHxo51G3z768sgnrY", "6eUKZXaKkcviH0Ku9w2n3V"],
+	# "2013": ["5BcAKTbp20cv7tC5VqPFoC", "0ZrpamOxcZybMHGg1AYtHP", "53XhwfbYqKCa1cC15pYq2q", "25fqWEebq6PoiGQIHIrdtv", "31TPClRtHm23RisEBtV3X7"],
+	# "2014": ["2RdwBSPQiwcmiDo9kixcl8", "6jJ0s89eD6GaHleKKya26X", "5y2Xq6xcjJb2jVM54GHK3t", "5yG7ZAZafVaAlMTeBybKAL", "5Pwc4xIPtQLFEnJriah9YJ"],
+	# "2015": ["3hv9jJF3adDNsBSIQDqcjp", "6eUKZXaKkcviH0Ku9w2n3V", "137W8MRPWKqSmrBGDBFSop", "6PXS4YHDkKvl1wkIl4V8DL", "04gDigrS5kc9YWfZHwBETP"],
+	# "2016": ["1uNFoZAHBGtllmzznpCI3s", "3TVXtAsR1Inumwj472S9r4", "5pKCCKE2ajJHZ9KAiaK11H", "3YQKmKGau1PzlVlkL1iodx", "7pFeBzX627ff0VnN6bxPR4"],
+    # "2017": ["6eUKZXaKkcviH0Ku9w2n3V", "4V8Sr092TqfHkfAA5fXXqG", "0du5cEVh5yTK9QJze8zA0C", "2YZyLoL8N0Wb9xBt1NhZWg", "69GGBxA162lTqCwzJG5jLp"],
+    # "2018": ["3TVXtAsR1Inumwj472S9r4", "6eUKZXaKkcviH0Ku9w2n3V", "64M6ah0SkkRsnPGtGiRAbb", "4nDoRrQiYLoBzwC5BhVJzF", "246dkjvS1zLTtiykXe5h60"],
+    # "2019": ["7jVv8c5Fj3E9VhNjxT4snq", "246dkjvS1zLTtiykXe5h60", "26VFTg2z8YR0cCuwLzESi2", "6qqNVTkY8uBg9cP3Jd7DAH", "64KEffDW9EtZ1y2vBYgq8T"],
+    # "2020": ["1Xyo4u8uXC1ZmMpatF05PJ", "246dkjvS1zLTtiykXe5h60", "757aE44tKEUQEqRuT6GnEB", "6M2wZ9GZgrQXHCFfjv46we", "4r63FhuTkUYltbVAg5TQnk"],
+    # "2021": ["6M2wZ9GZgrQXHCFfjv46we", "1Xyo4u8uXC1ZmMpatF05PJ", "6fWVd57NKTalqvmjRd2t8Z", "1McMsnEElThX1knmY4oliG", "5cj0lLjcoR7YOSnhnX0Po5"],
+	"2022": ["4yvcSjfu4PC0CYQyLy4wSq", "6KImCVD70vtIoJWnq6nGn3", "2tIP7SsRs7vjIcLrU85W8J", "4dpARuHxo51G3z768sgnrY", "6eUKZXaKkcviH0Ku9w2n3V"],
 	# "2023": ["4oUHIQIBe0LHzYfvXNW4QM", "5YGY8feqx7naU7z4HrwZM6", "7tYKF4w9nC0nq9CsPZTHyP", "06HL4z0CvFAxyc27GXpf02", "0iEtIxbK0KxaSlF7G42ZOp"],
 	}
 
