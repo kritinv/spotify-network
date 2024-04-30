@@ -89,14 +89,14 @@ starting_artists = {
 	#"2014": ["5BcAKTbp20cv7tC5VqPFoC", "0ZrpamOxcZybMHGg1AYtHP", "53XhwfbYqKCa1cC15pYq2q", "25fqWEebq6PoiGQIHIrdtv", "31TPClRtHm23RisEBtV3X7"],
 	#"2015": ["5BcAKTbp20cv7tC5VqPFoC", "0ZrpamOxcZybMHGg1AYtHP", "53XhwfbYqKCa1cC15pYq2q", "25fqWEebq6PoiGQIHIrdtv", "31TPClRtHm23RisEBtV3X7"],
 	#"2016": ["5BcAKTbp20cv7tC5VqPFoC", "0ZrpamOxcZybMHGg1AYtHP", "53XhwfbYqKCa1cC15pYq2q", "25fqWEebq6PoiGQIHIrdtv", "31TPClRtHm23RisEBtV3X7"],
-	"2017": ["5BcAKTbp20cv7tC5VqPFoC", "0ZrpamOxcZybMHGg1AYtHP", "53XhwfbYqKCa1cC15pYq2q", "25fqWEebq6PoiGQIHIrdtv", "31TPClRtHm23RisEBtV3X7"],
-	"2018": ["5BcAKTbp20cv7tC5VqPFoC", "0ZrpamOxcZybMHGg1AYtHP", "53XhwfbYqKCa1cC15pYq2q", "25fqWEebq6PoiGQIHIrdtv", "31TPClRtHm23RisEBtV3X7"],
+	# "2017": ["5BcAKTbp20cv7tC5VqPFoC", "0ZrpamOxcZybMHGg1AYtHP", "53XhwfbYqKCa1cC15pYq2q", "25fqWEebq6PoiGQIHIrdtv", "31TPClRtHm23RisEBtV3X7"],
+	# "2018": ["5BcAKTbp20cv7tC5VqPFoC", "0ZrpamOxcZybMHGg1AYtHP", "53XhwfbYqKCa1cC15pYq2q", "25fqWEebq6PoiGQIHIrdtv", "31TPClRtHm23RisEBtV3X7"],
 	# "2019": ["7jVv8c5Fj3E9VhNjxT4snq", "246dkjvS1zLTtiykXe5h60", "26VFTg2z8YR0cCuwLzESi2", "6qqNVTkY8uBg9cP3Jd7DAH", "64KEffDW9EtZ1y2vBYgq8T"],
 	# "2020": ["1Xyo4u8uXC1ZmMpatF05PJ", "246dkjvS1zLTtiykXe5h60", "757aE44tKEUQEqRuT6GnEB", "6M2wZ9GZgrQXHCFfjv46we", "4r63FhuTkUYltbVAg5TQnk"],
 	# "2021": ["6M2wZ9GZgrQXHCFfjv46we", "1Xyo4u8uXC1ZmMpatF05PJ", "6fWVd57NKTalqvmjRd2t8Z", "1McMsnEElThX1knmY4oliG", "5cj0lLjcoR7YOSnhnX0Po5"],
 	# "2022": ["4yvcSjfu4PC0CYQyLy4wSq", "6KImCVD70vtIoJWnq6nGn3", "2tIP7SsRs7vjIcLrU85W8J", "4dpARuHxo51G3z768sgnrY", "6eUKZXaKkcviH0Ku9w2n3V"],
 	# "2023": ["4oUHIQIBe0LHzYfvXNW4QM", "5YGY8feqx7naU7z4HrwZM6", "7tYKF4w9nC0nq9CsPZTHyP", "06HL4z0CvFAxyc27GXpf02", "0iEtIxbK0KxaSlF7G42ZOp"],
-	#"2023": ["5BcAKTbp20cv7tC5VqPFoC", "0ZrpamOxcZybMHGg1AYtHP", "53XhwfbYqKCa1cC15pYq2q", "25fqWEebq6PoiGQIHIrdtv", "31TPClRtHm23RisEBtV3X7"],
+	"2023": ["5BcAKTbp20cv7tC5VqPFoC", "0ZrpamOxcZybMHGg1AYtHP", "53XhwfbYqKCa1cC15pYq2q", "25fqWEebq6PoiGQIHIrdtv", "31TPClRtHm23RisEBtV3X7"],
 	}
 
 # Parameters
